@@ -1,0 +1,34 @@
+@font-face {
+    font-family: PlovdivDisplay-Regular;
+    src: url("./fonts/PlovdivDisplay-Regular.otf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    font-family: 'PlovdivDisplay-Regular';
+    background: radial-gradient(circle, hsla(0, 0%, 6%, 1) 0%, hsla(0, 0%, 5%, 1) 16%, hsla(0, 0%, 10%, 1) 100%);
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+
+    --blue: rgb(14, 61, 108);
+    --color1: #232931;
+    --color2: #393E46;
+    --color3: #31715c;
+    --color4: #EEEEEE;
+    --color5: #c54444;
+    --color6: #14171b;
+    --bg1: #0e0e0e;
+    --bg2: #1e1d1d;
+}
+
