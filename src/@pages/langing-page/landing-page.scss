@@ -13,60 +13,54 @@
             min-height: 25rem;
             background-image: url("/@assets/logo-header.png");
             background-repeat: no-repeat;
-            // background-color: rgb(3, 9, 21);
-            // border-bottom: 2px solid black;
         }
-        // .title {
-        //     color: var(--blue);
-        //     margin-top: -14rem;
-        //     padding-bottom: 1rem;
-        //     text-align: right;
-        //     .main {
-        //         font-size: 8rem;
-        //     }
-        //     .sub {
-        //         font-size: 1rem;
-        //         padding-right: 5rem;
-        //         margin-top: -1.5rem;
-        //     }
-        // }
         .sub-wrapper {
             width: 100%;
             background-color: var(--bg);
             padding-bottom: 2rem;
-            .line-paragraph {
-                padding: 2rem;
-                text-indent: 4rem;
+            .paragraph-wrapper {
                 margin: 0 calc(13rem - 1px);
-                border: 3px solid var(--line);
-                color: whitesmoke;
+                background-color: var(--line);
                 position: relative;
-                display: flex;
-                flex-direction: column;
-                ul {
-                    list-style-position: inside;
-                    margin-left: -2rem;
-                    margin-right: -2rem;
-                }
 
-                .text {
-                    margin-bottom: 2rem;
-                }
-
-                &:nth-child(even) {
-                    border-top: none;
-                    border-left: none;
-                    justify-content: left;
-                }
                 &:nth-child(odd) {
-                    border-top: none;
-                    border-right: none;
-                    justify-content: right;
+                    padding-left: 3px;
+                    padding-bottom: 3px;
+                }
+                &:nth-child(even) {
+                    padding-right: 3px;
+                    padding-bottom: 3px;
                 }
                 &:last-child {
-                    border-bottom: none;
-                    min-height: 15rem;
+                    padding-bottom: 0;
                     margin-bottom: 10rem;
+                    background-color: var(--line);
+
+                    .line-paragraph {
+                        padding-bottom: 10rem;
+                    }
+                }
+
+                .line-paragraph {
+                    z-index: 2;
+                    padding: 2rem;
+                    text-indent: 4rem;
+                    background-color: var(--bg);
+                    color: whitesmoke;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    height: calc(100% - 6px);
+                    ul {
+                        list-style-position: inside;
+                        margin-left: -2rem;
+                        margin-right: -2rem;
+                    }
+    
+                    .text {
+                        margin-bottom: 2rem;
+                    }
+
                 }
             }
 
@@ -124,5 +118,26 @@
     .langing-page .wrapper  {
       width: 100%;
       min-width: 100%;
+    }
+  }
+  * {
+    z-index: 2;
+  }
+
+  @keyframes electricity {
+    0% {
+        transform: translate(0,0);
+    }
+    5% {
+        transform: translate(0px, 150px);
+    }
+    20% {
+        transform: translate(1095px, 150px);
+    }
+    90% {
+        transform: translate(1095px, 520px);
+    }
+    100% {
+        transform: translate(0, 520px);
     }
   }
