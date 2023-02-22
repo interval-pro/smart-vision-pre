@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/interval-pro.github.io/monitoring/static/css/main.c57ca32e.css",
-    "main.js": "/interval-pro.github.io/monitoring/static/js/main.5611b348.js",
-    "static/media/logo-header.png": "/interval-pro.github.io/monitoring/static/media/logo-header.098506c517569d39a1a5.png",
-    "static/media/PlovdivDisplay-Regular.otf": "/interval-pro.github.io/monitoring/static/media/PlovdivDisplay-Regular.cfd520501d608942cc41.otf",
-    "index.html": "/interval-pro.github.io/monitoring/index.html",
-    "main.c57ca32e.css.map": "/interval-pro.github.io/monitoring/static/css/main.c57ca32e.css.map",
-    "main.5611b348.js.map": "/interval-pro.github.io/monitoring/static/js/main.5611b348.js.map"
+    "main.css": "/monitoring/static/css/main.7692201e.css",
+    "main.js": "/monitoring/static/js/main.0f5c21ed.js",
+    "static/media/logo-header.png": "/monitoring/static/media/logo-header.098506c517569d39a1a5.png",
+    "static/media/PlovdivDisplay-Regular.otf": "/monitoring/static/media/PlovdivDisplay-Regular.cfd520501d608942cc41.otf",
+    "index.html": "/monitoring/index.html",
+    "main.7692201e.css.map": "/monitoring/static/css/main.7692201e.css.map",
+    "main.0f5c21ed.js.map": "/monitoring/static/js/main.0f5c21ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.c57ca32e.css",
-    "static/js/main.5611b348.js"
+    "static/css/main.7692201e.css",
+    "static/js/main.0f5c21ed.js"
   ]
 }
