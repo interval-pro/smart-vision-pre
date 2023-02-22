@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/monitoring/static/css/main.7692201e.css",
-    "main.js": "/monitoring/static/js/main.0f5c21ed.js",
+    "main.css": "/monitoring/static/css/main.912d7f6e.css",
+    "main.js": "/monitoring/static/js/main.70397d58.js",
     "static/media/logo-header.png": "/monitoring/static/media/logo-header.098506c517569d39a1a5.png",
     "static/media/PlovdivDisplay-Regular.otf": "/monitoring/static/media/PlovdivDisplay-Regular.cfd520501d608942cc41.otf",
     "index.html": "/monitoring/index.html",
-    "main.7692201e.css.map": "/monitoring/static/css/main.7692201e.css.map",
-    "main.0f5c21ed.js.map": "/monitoring/static/js/main.0f5c21ed.js.map"
+    "main.912d7f6e.css.map": "/monitoring/static/css/main.912d7f6e.css.map",
+    "main.70397d58.js.map": "/monitoring/static/js/main.70397d58.js.map"
   },
   "entrypoints": [
-    "static/css/main.7692201e.css",
-    "static/js/main.0f5c21ed.js"
+    "static/css/main.912d7f6e.css",
+    "static/js/main.70397d58.js"
   ]
 }
