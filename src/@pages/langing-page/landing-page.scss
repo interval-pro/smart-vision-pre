@@ -7,95 +7,113 @@
     .wrapper {
         width: 80%;
         min-width: 60rem;
-        max-width: 120rem;
+        max-width: 100rem;
         .main-image {
             width: 100%;
-            background-color: rgba(191, 191, 191, 0.068);
-            height: 25rem;
-            border-bottom: 2px solid black;
+            min-height: 25rem;
+            background-image: url("/@assets/logo-header.png");
+            background-repeat: no-repeat;
+            // background-color: rgb(3, 9, 21);
+            // border-bottom: 2px solid black;
         }
-        .title {
-            color: var(--blue);
-            margin-top: -14rem;
-            padding-bottom: 1rem;
-            text-align: right;
-            .main {
-                font-size: 8rem;
-            }
-            .sub {
-                font-size: 1rem;
-                padding-right: 5rem;
-                margin-top: -1.5rem;
-            }
-        }
+        // .title {
+        //     color: var(--blue);
+        //     margin-top: -14rem;
+        //     padding-bottom: 1rem;
+        //     text-align: right;
+        //     .main {
+        //         font-size: 8rem;
+        //     }
+        //     .sub {
+        //         font-size: 1rem;
+        //         padding-right: 5rem;
+        //         margin-top: -1.5rem;
+        //     }
+        // }
         .sub-wrapper {
             width: 100%;
-            min-height: 70rem;
-            background-color: rgb(39, 39, 39);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .main-text {
-                padding: 2rem 0;
-                font-size: 1.5rem;
+            background-color: var(--bg);
+            padding-bottom: 2rem;
+            .line-paragraph {
+                padding: 2rem;
+                text-indent: 4rem;
+                margin: 0 calc(13rem - 1px);
+                border: 3px solid var(--line);
                 color: whitesmoke;
-                width: 80%;
-                p {
-                    margin: 1rem 0;
-                    text-indent: 2rem;
-                }
-                ul {
-                    padding: 0 6rem;
-                    text-indent: 0;
-                    margin-bottom: 2rem;
-                }
-            }
-            .subs {
+                position: relative;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                .giant-span {
-                    font-size: 3rem;
-                    text-decoration: underline;
-                    margin-bottom: 1rem;
+                ul {
+                    list-style-position: inside;
+                    margin-left: -2rem;
+                    margin-right: -2rem;
                 }
-                .subs-form {
-                    display: flex;
-                    height: 3rem;
-                    margin: 1rem 0;;
-                    input {
-                        border: none;
-                        margin-right: 2rem;
-                        height: 100%;
-                        font-size: 1.3rem;
-                        padding: 0 0.5rem;
-                        background-color: rgb(39, 39, 39);;
-                        border-bottom: 1px solid wheat;
-                        color: white;
-                        &::placeholder {
-                            color: white
-                        }
-                        &:focus {
-                            border: none;
-                            outline: none;
-                            border-bottom: 1px solid wheat;
-                        }
+
+                .text {
+                    margin-bottom: 2rem;
+                }
+
+                &:nth-child(even) {
+                    border-top: none;
+                    border-left: none;
+                    justify-content: left;
+                }
+                &:nth-child(odd) {
+                    border-top: none;
+                    border-right: none;
+                    justify-content: right;
+                }
+                &:last-child {
+                    border-bottom: none;
+                    min-height: 15rem;
+                    margin-bottom: 10rem;
+                }
+            }
+
+            .subs-box {
+                position: absolute;
+                right: -3px;
+                bottom: -3px;
+                display: flex;
+                align-items: flex-end;
+                input {
+                    border: none;
+                    font-size: 1.25rem;
+                    height: 2rem;
+                    background: none;
+                    color: whitesmoke;
+                    border-bottom: 3px solid var(--line);
+                    padding: 1rem;
+                    width: 18rem;
+                    &::placeholder {
+                        color: whitesmoke;
+                        opacity: 0.85;
                     }
-                    button {
-                        height: 100%;
+                    &:focus {
                         border: none;
-                        padding: 0.25rem 0.5rem;
-                        background-color: var(--color3);
-                        font-size: 1.2rem;
-                        cursor: pointer;
+                        outline: none;
+                        border-bottom: 3px solid var(--line);
                     }
                 }
-                padding: 2rem 0;
-                width: 30rem;
-                color: whitesmoke;
-                p {
-                    text-align: center;
-                    color: var(--blue);
+                button {
+                    border: none;
+                    padding: 1rem 2rem;
+                    background-color: var(--blue);
+                    color: whitesmoke;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    transition: all 0.25s;
+                    &:hover {
+                        background-color: var(--line);
+
+                    }
+                }
+                .subs-info {
+                    padding: 1rem;
+                    position: absolute;
+                    top: 100%;
+                    color: var(--line);
+                    font-size: 0.85rem;
                 }
             }
         }
