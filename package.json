@@ -1,4 +1,5 @@
 {
+  "homepage": "interval-pro.github.io/monitoring",
   "name": "monitoring",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +8,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "firebase": "^9.17.1",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -15,7 +17,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
