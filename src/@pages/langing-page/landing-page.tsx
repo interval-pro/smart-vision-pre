@@ -2,46 +2,67 @@ import { addDoc, collection, getDocs } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { db } from '../../@services/firebase-config';
 import './landing-page.scss';
+import logo from '../../@assets/logo.png';
+
 export const LandingPage = () => {
-    const [email, setEmail] = useState<String>();
-    const [additional, setAdditional] = useState<String>("");
-
-    const [nSubs, setNSubs] = useState<number>(0);
-
+    const [email, setEmail] = useState("");
+    const [nSubs, setNSubs] = useState(0);
+    const [message, setMessage] = useState("");
     const subscribersCollection = collection(db, "subscribers");
 
-    const add = async () => {
-        const date = Date.now();
-        const subscribed = true;
-        const country = 'BGTETS';
-        const ip = 'IPTEST';
+    const subscribe = async () => {
+        try {
+            setMessage('')
+            const date = Date.now();
+            const country = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            await validateEmail();
+            const subsInfo = { date, country, email };
+            const res = await addDoc(subscribersCollection, subsInfo);
+            console.log({ res });
+            if (res.type === 'document') {
+                setEmail("");
+                setMessage(`${email} Subscribed!`);
+                read();
+            }
+        } catch (error: any) {
+            setMessage(error.message);
+        }
+    };
 
-        const subsInfo = { date, subscribed, country, ip, email, additional };
-        addDoc(subscribersCollection, subsInfo);
+    const validateEmail = async () => {
+        if (!email) throw new Error("Email not Valid");
+        if (email.length < 5) throw new Error("Too short Email");
+        if (!email.includes("@")) throw new Error("Email not Valid");
+
+        const data = await getDocs(subscribersCollection)
+        const docs = data.docs.map(d => d.data());
+        const existingSubs = docs.find(q => q['email'] === email);
+        if (existingSubs) throw new Error("The Email is Already Subscribed");
+        return true;
     };
 
     useEffect(() => {
-        const read = async () => {
-            const data = await getDocs(subscribersCollection);
-            setNSubs(data.docs.length + 194)
-        };
         read();
     }, []);
 
-    const subscribe = () => {
-        add()
-            .then(q => console.log(q))
-            .catch(e => console.log(e))
+    const read = async () => {
+        const data = await getDocs(subscribersCollection);
+        if (data?.docs.length) setNSubs(data.docs.length)
     };
 
-    const onKeyDown = (key: string) => {
-        if (key === 'Enter') subscribe();
-    };
+    const onKeyDown = (key: string) => key === 'Enter' ? subscribe() : null;
 
     return (
         <div className="langing-page">
             <div className="wrapper">
-                <div className="main-image"></div>
+                <div className="main-image">
+                    <img src={logo} className="logo" />
+                    <div className="title">
+                        <span>
+                            MONITORING
+                        </span>
+                    </div>
+                </div>
                 <div className="sub-wrapper" >
                     <div className="paragraph-wrapper">
                         <div className="line-paragraph">
@@ -110,12 +131,23 @@ export const LandingPage = () => {
                                 be customized to meet your unique requirements. This means that no matter how
                                 big or small your organization is, you can benefit from the insights and analytics.
                             <div className="subs-box">
-                                <input type="text" placeholder='Your Email'/>
-                                <button>SUBSCRIBE</button>
+                                <input
+                                    type="text"
+                                    placeholder='Your Email'
+                                    value={email}
+                                    onKeyDown={(k) => onKeyDown(k.key)}
+                                    onChange={(k) => setEmail(k.target.value)}
+                                />
+                                <button onClick={() => subscribe() }>SUBSCRIBE</button>
+
                                 <div className="subs-info">
+                                    <div className={`message ${message.includes('Subscribed') ? 'green' : 'red'}`}>
+                                        { message }
+                                    </div>
                                     By subscribing, you'll receive regular updates on our progress,
                                     as well as exclusive access to early bird pricing and other special offers.
                                     You'll also be the first to know about new features and product updates.
+                                    < br/> { nSubs } Subscribers
                                 </div>
                             </div>
                         </div>

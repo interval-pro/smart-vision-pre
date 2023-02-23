@@ -10,9 +10,27 @@
         max-width: 100rem;
         .main-image {
             width: 100%;
-            min-height: 25rem;
-            background-image: url("/@assets/logo-header.png");
-            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            .logo {
+                position: relative;
+                width: 15rem;
+                margin-left: 13rem;
+                z-index: 3;
+            }
+            .title {
+                color: red;
+                font-size: 7rem;
+                z-index: 3;
+                width: 100%;
+                background-color: var(--bg);
+                color: var(--lightBlue);
+                margin-top: -1rem;
+                margin-left: 2rem;
+                span {
+                    margin-left: -1rem;
+                }
+            }
         }
         .sub-wrapper {
             width: 100%;
@@ -20,21 +38,36 @@
             padding-bottom: 2rem;
             .paragraph-wrapper {
                 margin: 0 calc(13rem - 1px);
-                background-color: var(--line);
+                background-color: var(--darkBlue);
                 position: relative;
 
                 &:nth-child(odd) {
                     padding-left: 3px;
                     padding-bottom: 3px;
+                    .line-paragraph {
+                        padding-left: calc(2rem - 3px);
+                        padding-bottom: calc(2rem - 3px);
+                    }
                 }
                 &:nth-child(even) {
                     padding-right: 3px;
                     padding-bottom: 3px;
+                    .line-paragraph {
+                        padding-right: calc(2rem - 3px);
+                        padding-bottom: calc(2rem - 3px);
+                    }
+                }
+                &:first-child {
+                    padding-top: 3px;
+                    margin-top: -7rem;
+                    .line-paragraph {
+                        padding-top: 7rem;
+                    }
                 }
                 &:last-child {
                     padding-bottom: 0;
                     margin-bottom: 10rem;
-                    background-color: var(--line);
+                    background-color: var(--darkBlue);
 
                     .line-paragraph {
                         padding-bottom: 10rem;
@@ -46,7 +79,7 @@
                     padding: 2rem;
                     text-indent: 4rem;
                     background-color: var(--bg);
-                    color: whitesmoke;
+                    color: var(--dirtyWhite);
                     position: relative;
                     display: flex;
                     flex-direction: column;
@@ -75,30 +108,30 @@
                     font-size: 1.25rem;
                     height: 2rem;
                     background: none;
-                    color: whitesmoke;
-                    border-bottom: 3px solid var(--line);
+                    color: var(--dirtyWhite);
+                    border-bottom: 3px solid var(--darkBlue);
                     padding: 1rem;
                     width: 18rem;
                     &::placeholder {
-                        color: whitesmoke;
+                        color: var(--dirtyWhite);;
                         opacity: 0.85;
                     }
                     &:focus {
                         border: none;
                         outline: none;
-                        border-bottom: 3px solid var(--line);
+                        border-bottom: 3px solid var(--darkBlue);
                     }
                 }
                 button {
                     border: none;
                     padding: 1rem 2rem;
-                    background-color: var(--blue);
-                    color: whitesmoke;
+                    background-color: var(--lightBlue);
+                    color: var(--dirtyWhite);;
                     font-size: 1.5rem;
                     cursor: pointer;
                     transition: all 0.25s;
                     &:hover {
-                        background-color: var(--line);
+                        background-color: var(--darkBlue);
 
                     }
                 }
@@ -106,8 +139,17 @@
                     padding: 1rem;
                     position: absolute;
                     top: 100%;
-                    color: var(--line);
+                    color: var(--darkBlue);
                     font-size: 0.85rem;
+                    .message {
+                        font-size: 1.5rem;
+                    }
+                    .red {
+                        color: var(--lightPurple);
+                    }
+                    .green {
+                        color: var(--green);
+                    }
                 }
             }
         }
@@ -116,28 +158,7 @@
 
 @media only screen and (max-width: 60rem) {
     .langing-page .wrapper  {
-      width: 100%;
-      min-width: 100%;
+        width: 100%;
+        min-width: 100%;
     }
-  }
-  * {
-    z-index: 2;
-  }
-
-  @keyframes electricity {
-    0% {
-        transform: translate(0,0);
-    }
-    5% {
-        transform: translate(0px, 150px);
-    }
-    20% {
-        transform: translate(1095px, 150px);
-    }
-    90% {
-        transform: translate(1095px, 520px);
-    }
-    100% {
-        transform: translate(0, 520px);
-    }
-  }
+}
