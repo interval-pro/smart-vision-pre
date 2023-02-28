@@ -59,14 +59,14 @@ export const LandingPage = () => {
                     <img src={logo} className="logo" />
                     <div className="title">
                         <span>
-                            MONITORING
+                            SMART-VISION
                         </span>
                     </div>
                 </div>
                 <div className="sub-wrapper" >
                     <div className="paragraph-wrapper">
                         <div className="line-paragraph">
-                            Monitoring (by Interval Pro) is a web-based AI-powered camera monitoring
+                            Smart Vision (by Interval Pro) is a web-based AI-powered camera monitoring
                                 service for businesses and individuals. This platform uses AI scripts for
                                 analysis webcam outputs and generate any statistics depending on the customer's needs.
                                 This technology offers a more efficient and cost-effective way to monitor and analyze data.
@@ -102,7 +102,7 @@ export const LandingPage = () => {
                         <div className="line-paragraph">
                             <span className='text'>
                                     In addition to monitoring traffic flow,
-                                Interval Pro can also provide insights into visitor traffic.
+                                Smart Vision can also provide insights into visitor traffic.
                                 By analyzing data from your cameras, this platform can help you
                                 understand how many people are visiting your space, when they are visiting,
                                 and how long they are staying. This information can be useful
