@@ -1,6 +1,6 @@
 {
-  "homepage": "http://interval-pro.github.io/monitoring",
-  "name": "monitoring",
+  "homepage": "http://interval-pro.github.io/smart-vision-pre",
+  "name": "smart-vision-pre",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
