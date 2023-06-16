@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/smart-vision-pre/static/css/main.26c964cd.css",
-    "main.js": "/smart-vision-pre/static/js/main.84c3d486.js",
-    "static/media/logo.png": "/smart-vision-pre/static/media/logo.9eb3735e9b4540d972a9.png",
+    "main.css": "/smart-vision-pre/static/css/main.d8357475.css",
+    "main.js": "/smart-vision-pre/static/js/main.43883f7e.js",
+    "static/media/image1.png": "/smart-vision-pre/static/media/image1.4bc420797bc3364403c7.png",
+    "static/media/screenshot.png": "/smart-vision-pre/static/media/screenshot.98378bc8e84edbec1666.png",
     "static/media/PlovdivDisplay-Regular.otf": "/smart-vision-pre/static/media/PlovdivDisplay-Regular.cfd520501d608942cc41.otf",
+    "static/media/logo.png": "/smart-vision-pre/static/media/logo.aaa899f54182cb9f50d1.png",
     "index.html": "/smart-vision-pre/index.html",
-    "main.26c964cd.css.map": "/smart-vision-pre/static/css/main.26c964cd.css.map",
-    "main.84c3d486.js.map": "/smart-vision-pre/static/js/main.84c3d486.js.map"
+    "main.d8357475.css.map": "/smart-vision-pre/static/css/main.d8357475.css.map",
+    "main.43883f7e.js.map": "/smart-vision-pre/static/js/main.43883f7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.26c964cd.css",
-    "static/js/main.84c3d486.js"
+    "static/css/main.d8357475.css",
+    "static/js/main.43883f7e.js"
   ]
 }
