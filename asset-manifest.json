@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/smart-vision-pre/static/css/main.d8357475.css",
-    "main.js": "/smart-vision-pre/static/js/main.43883f7e.js",
+    "main.js": "/smart-vision-pre/static/js/main.2e39abb2.js",
     "static/media/image1.png": "/smart-vision-pre/static/media/image1.4bc420797bc3364403c7.png",
     "static/media/screenshot.png": "/smart-vision-pre/static/media/screenshot.98378bc8e84edbec1666.png",
     "static/media/PlovdivDisplay-Regular.otf": "/smart-vision-pre/static/media/PlovdivDisplay-Regular.cfd520501d608942cc41.otf",
     "static/media/logo.png": "/smart-vision-pre/static/media/logo.aaa899f54182cb9f50d1.png",
     "index.html": "/smart-vision-pre/index.html",
     "main.d8357475.css.map": "/smart-vision-pre/static/css/main.d8357475.css.map",
-    "main.43883f7e.js.map": "/smart-vision-pre/static/js/main.43883f7e.js.map"
+    "main.2e39abb2.js.map": "/smart-vision-pre/static/js/main.2e39abb2.js.map"
   },
   "entrypoints": [
     "static/css/main.d8357475.css",
-    "static/js/main.43883f7e.js"
+    "static/js/main.2e39abb2.js"
   ]
 }
